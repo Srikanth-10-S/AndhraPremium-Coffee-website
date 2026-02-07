@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AndhraPremium Coffee</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_bag" />
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body> 
+
+<!----------------- MAIN-NAVBAR ----------------->
+
+<header class="navbar">
+    <div class="nav-left">
+         <div class="nav-item" data-menu="shop">
+           <a href="#">SHOP</a>
+              </div>
+
+       <div class="nav-item" data-menu="learn">
+           <a href="#">LEARN</a>
+              </div>
+
+      <div class="nav-item" data-menu="about">
+          <a href="#">ABOUT</a>
+             </div>
+
+      <div class="nav-item" data-menu="experience">
+          <a href="#">EXPERIENCE</a>
+             </div>
+    </div>
+
+      <div class="nav-center">
+           <div class="nav-title">andhra coffee</div>
+             </div>
+
+  <div class="nav-right">
+
+<!-- Profile -->
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+         <circle cx="12" cy="8" r="4"/>
+         <path d="M4 20c2-4 14-4 16 0"/>
+      </svg>
+
+<!-------- LOGIN-SECTION --------->
+
+<div id="loginModal">
+     <div class="login-container">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h1>Hello!</h1>
+        <p>Please enter your contact details to Sign up or Sign in</p>
+
+    <input type="email" placeholder="Enter your email">
+    <input type="password" placeholder="Enter your Password">
+
+    <div class="forgot-password">
+      <a href="#">Forgot password?</a>
+    </div>
+
+    <button>Sign In</button>
+
+    <div class="divider">or continue with</div>
+
+    <div class="social-login">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" alt="Facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/250px-Google_%22G%22_logo.svg.png" alt="Google">
+      <img src="https://w7.pngwing.com/pngs/566/77/png-transparent-apple-logo-apple-watch-logo-apple-logo-heart-logo-computer-wallpaper-thumbnail.png" alt="Apple">
+    </div>
+
+    <div class="terms">
+      By continuing, you agree to our <a href="#">Terms of Service</a>.
+    </div>
+
+    <div class="secured">
+      Secured by <span class="secured-brand">ANDHRA COFFEE</span>
+    </div>
+  </div>
+</div>
+
+    <!-- Search -->
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+         <circle cx="11" cy="11" r="7"/>
+         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+
+    <!-- Cart -->
+     <div class="cart">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+           <path d="M6 6h15l-2 9H7z"/>
+           <circle cx="9" cy="21" r="1"/>
+           <circle cx="18" cy="21" r="1"/>
+       </svg>
+           <span class="cart-count">0</span>
+      </div>
+
+  </div>
+
+  <!------------- MEGA DROPDOWN ------------------>
+    
+  <div class="mega-dropdown">
+    <div class="dropdown-grid" id="dropdownContent"></div>
+  </div>
+
+</header>
+
+<!------------- MAIN-HERO-SECTION -------------------->
+
+<section class="hero">
+      <video autoplay muted loop playsinline>
+      <source src="Andhra-Coffe.mp4" type="video/mp4">
+        </video>
+  <h1 class="hero-title">andhra coffee</h1>
+
+</section>
+
+<!------------- TOP-SLIDING-CARDS-SECTION -------------------->
+
+<section class="display-wrapper">
+
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+
+    <div class="display">
+        <div class="dis-text">
+          <h1 id="title">The ARAKU Brew <br>Guide</h1>
+          <p id="subtitle">Brew the Perfect Cup</p>
+             <button class="Order-btn">LEARN MORE</button>
+  </div>
+
+    <div class="dis-img">
+      <img id="image" src="https://www.arakucoffee.in/cdn/shop/files/mokaorangeNew_1.jpg?v=1687192056">
+     </div>
+  </div>
+
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+</section>
+
+<!-------------- SMALL-RIBBON-SECTION -------------------->
+
+<div class="ribbon">
+    <div class="ribbon-content">
+
+<!-- scrol section-1 -->      
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M3 8h13a4 4 0 010 8H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M17 8h1a3 3 0 010 6h-1" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      CERTIFIED ORGANIC
+    </span>
+
+<!-- scrol section-2 -->
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 3C7 7 6 12 6 15a6 6 0 0012 0c0-3-1-8-6-12z"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      REGENERATIVE AGRICULTURE
+    </span>
+
+<!-- scrol section-3 -->
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 2s4 4 4 8a4 4 0 11-8 0c0-4 4-8 4-8z"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      FRESH ROAST
+    </span>
+
+<!-- scrol section-4 -->
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M2 12l5-5 5 5 5-5 5 5" fill="none"
+              stroke="currentColor" stroke-width="2"/>
+      </svg>
+      FAIR TRADE
+    </span>
+<!-- scrol section-5 -->
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M3 8h13a4 4 0 010 8H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M17 8h1a3 3 0 010 6h-1" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      CERTIFIED ORGANIC
+    </span>
+<!--scrol section-6-->
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M3 8h13a4 4 0 010 8H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M17 8h1a3 3 0 010 6h-1" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+       ORGANIC COFFEE
+    </span>
+<!-- scrol section-7 -->
+    <span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M3 8h13a4 4 0 010 8H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M17 8h1a3 3 0 010 6h-1" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      CERTIFIED BY THE PEOPLE
+    </span>
+  </div>
+</div>
+
+<!---------------- SELLING-ITEMS-SECTION ------------------->
+
+ <section id="product-1" class="section-p-1">
+      <h2>BEST <span>PRODUCTS</span></h2>
+      <p>Had a sip of coffee with Araku-coffee products</p>
+
+    <div class="product-container" id="productContainer"></div>
+      <button class="btn">SHOP NOW</button>
+
+</section>
+  
+<!----------------- AD-SECTION ---------------------------->
+
+<section id="Banner">
+     <!-- Left image -->
+     <div class="BB-img">
+        <img src="cup-display.png" alt="Araku coffee cup illustration left">
+  </div>
+  <!-- Content -->
+    <div class="B-text">
+      <h1>New to ARAKU Coffee?</h1>
+      <p>Drinking specialty coffee and tasting its nuances in Araku Coffee</p>
+        <button class="Button">EXPLORE</button>
+  </div>
+  <!-- Right image -->
+      <div class="B-img">
+         <img src="cup-display.png" alt="Araku coffee cup illustration right">
+  </div>
+
+</section>
+
+<!-------------------- QUICK BUY-SECTION ------------------------>
+   
+  <section class="section-tabs">
+    <!-- SMALL NAVBAR -->
+       <nav class="nav-scroll">
+           <a href="#" class="active" data-tab="coffee">Coffee</a>
+           <a href="#" data-tab="equipment">Equipment</a>
+           <a href="#" data-tab="brew">Brew</a>
+           <span class="indicator"></span>
+       </nav>
+<!-- CARD-ITEMS -->
+<section class="tab-content">
+      <div class="tab-pane active" id="coffee">
+          <div class="card-grid" id="coffeeGrid"></div>
+      </div>
+
+  <div class="tab-pane" id="equipment">
+     <div class="card-grid"  id="equipmentGrid"></div>
+  </div>
+
+  <div class="tab-pane" id="brew">
+    <div class="card-grid"  id="brewGrid"></div>
+  </div>
+  </section>
+</section>
+
+<!-- Checkout Panel -->
+     <div class="checkout-panel" id="checkoutPanel">
+
+<!-- Top Header -->
+       <div class="checkout-header">
+          <span class="choose-title">Choose options</span>
+          <span class="close-btn" id="closeCheckout">&times;</span>
+        </div>
+
+<div class="checkout-divider"></div>
+
+       <div class="checkout-card">
+           <img id="checkoutImg" src="" alt="Product">
+
+        <div class="checkout-info">
+          <h3 id="checkoutTitle"></h3>
+          <p class="desc" id="checkoutDesc"></p>
+          <div class="price" id="checkoutPrice"></div>
+        </div>
+  </div>
+
+<!-- PACK Size Row -->
+<div class="grind-row">
+  <span class="grind-label">PACK</span>
+
+  <div class="grind-selector">
+    <div class="grind-selected" id="packSelected">Select</div>
+
+    <div class="grind-options" id="packOptions">
+      <div class="grind-option">Pouch</div>
+      <div class="grind-option">Tin</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="checkout-divider"></div>
+
+<!-- SIZE Row -->
+<div class="grind-row">
+  <span class="grind-label">SIZE</span>
+
+  <div class="grind-selector">
+    <div class="grind-selected" id="sizeSelected">Select</div>
+
+    <div class="grind-options" id="sizeOptions">
+      <div class="grind-option">1Kg</div>
+      <div class="grind-option">500 gms</div>
+      <div class="grind-option">250 gms</div>
+    </div>
+  </div>
+</div>
+
+<div class="checkout-divider"></div>
+
+<!-- Grind Size Row -->
+<div class="grind-row">
+  <span class="grind-label">GRIND SIZE</span>
+
+  <div class="grind-selector">
+    <div class="grind-selected" id="grindSelected">Select</div>
+
+    <div class="grind-options" id="grindOptions">
+      <div class="grind-option">Whole Bean</div>
+      <div class="grind-option">Espresso</div>
+      <div class="grind-option">Filter</div>
+      <div class="grind-option">French Press</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quantity Row -->
+   <div class="quantity-row">
+         <span>QUANTITY</span>
+
+       <div class="qty-box">
+            <button class="qty-btn minus">−</button>
+            <span id="qtyValue">1</span>
+            <button class="qty-btn plus">+</button>
+        </div>
+</div>
+
+<!-- Add to Cart -->
+     <button class="add-carts" >ADD TO CART</button>
+
+<!-- BUY to Cart -->
+     <button class="buy-now">BUY IT NOW</button>
+
+</div>
+
+<!-------------------- CARD-FLIP-SECTION ---------------->
+
+ <section class="main-section">
+        <h1>Our <span>Promise </span>to farmers</h1>
+        <p>From nurturing farmers to delighting coffee lovers</p>
+
+    <div class="card-container">
+     <!-- Card 1 -->
+        <div class="flip-card">
+           <div class="flip-inner">
+               <div class="flip-front">
+                  <h3>Profit for farmers</h3>
+                  <img src="https://www.arakucoffee.in/cdn/shop/files/arakunomics-profit.jpg?v=1687324627" alt="">
+               </div>
+          <div class="flip-back">
+            <p>We provide our farmers with nutrient-rich compost, making fragile soil dynamically fertile and ensuring natural sweetness in coffee cherries.</p>
+          </div>
+         </div>
+        </div>
+    <!-- Card 2 -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="https://www.arakucoffee.in/cdn/shop/files/arakunomics-quality.jpg?v=1687324664" alt="">
+            <h3>Quality for consumers</h3>
+          </div>
+          <div class="flip-back">
+            <p>Our coffee is handpicked and roasted carefully to ensure a balanced fruity and floral aroma, providing rich quality for every cup.</p>
+          </div>
+        </div>
+      </div>
+    <!-- Card 3 -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="https://www.arakucoffee.in/cdn/shop/files/arakunomics-regen-agri.jpg?v=1687324682" alt="">
+            <h3>Sustainable growth</h3>
+          </div>
+          <div class="flip-back">
+            <p>Through sustainable practices and biodiversity, we preserve soil health and ensure long-term productivity for our farmers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <button class="ourbtn">OUR STORY</button>
+
+  </section>
+ 
+<!--------------- AD2-SECTION ----------------------------------->
+
+<section class="discount-container">
+      <div class="discount-content">
+        <h2>BUY 10 DRINKS</h2>
+        <h1>GET 1 FREE</h1>
+        <p>
+            EVERY HANDCRAFT DRINK YOU WILL GET A BEANS. <br>
+            COLLECT 10 BEANS AND YOUR NEXT ONE'S GETS<br>
+            FREE COFFEE</p>
+         <a href="#" class="shops-btn">SHOP NOW</a>
+     </div>
+  <div class="cake-card">
+        <img src="/cake.png" alt="cake">
+  </div>
+    <div class="bun-card">
+        <img src="/cookies.png" alt="cookies">
+    </div>
+
+</section>
+
+<!--------------- COMUNITY-CONNECTIONS-SECTION ----------------->
+
+<section id="community" class="section-c1">
+     <div class="co-text">
+        <h1>LOVE FROM OUR <span>COMMUNITY</span></h1>
+        <p>Across the Country</p>
+    </div>
+
+</section>
+
+<div class="card-section">
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="semi-card">
+               <img src="https://www.shutterstock.com/image-photo/smiling-young-indian-man-standing-260nw-2408409277.jpg" alt="">
+                <h4>Arun Kumar K</h4>
+                <h5>Chief Engineer at Wipro</h5>
+                <p>
+                    Arakuccino is an organic hot coffee drink made from
+                    <span>hand-ground Araku Arabica coffee beans</span>.
+                    Known for its aroma and bittersweetness.
+                </p>
+                <h6>View All Members</h6>
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="semi-card">
+              <img src="https://www.shutterstock.com/image-photo/smiling-indian-arabic-student-woman-260nw-2476161017.jpg" alt="">
+                <h4>Shilpaa Kiran</h4>
+                <h5>Founder of Star Hotels</h5>
+                <p>
+                    Coffee cultivation in the Araku region began in the early 1900s.
+                    <span>Araku Valley, Eastern Ghats</span> brought it global attention.
+                </p>
+                <h6>View All Members</h6>
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="semi-card">
+              <img src="https://www.shutterstock.com/image-photo/smiling-man-using-his-phone-260nw-2626011819.jpg" alt="">
+                <h4>Vamsi Krishna</h4>
+                <h5>Co-Founder, Coffee Day</h5>
+                <p>
+                    Araku Coffee is a single-origin coffee grown by tribals in
+                    <span>Araku Valley, Andhra Pradesh</span>, known for premium quality.
+                </p>
+                <h6>View All Members</h6>
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------- FOOTER-SECTION ---------------->  
+
+<footer>
+    <div class="col">
+        <h4>Contact</h4>
+        <p><strong>Address: </strong>562 1st stage BTM-Layout, Bengaluru</p>
+                     <p><strong>Phone:</strong> +91 9874561230 </p>
+                      <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                 <div class="follow">
+                     <h4>Follow Us</h4>
+                <div class="icon">
+                     <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                       </div>
+                   </div>
+             </div>
+               <div class="col">
+                   <h4>About</h4>
+                        <a href="#">About us</a>
+                        <a href="#">Delivery Information</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">terms & Conditions</a>
+                        <a href="#">Contact US</a>
+                </div>   
+           <div class="col">
+                 <h4>My Account</h4>
+                     <a href="#">Sign In</a>
+                      <a href="#">View Cart</a>
+                      <a href="#">My Wishlist</a>
+                      <a href="#">Track My Order</a>
+                      <a href="#">help</a>
+           </div>
+              <div class="col install">
+                  <h4>Install App</h4>
+                     <p>From App Store or Google Play</p>
+             <div class="row">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" alt="" height="30px">
+                  <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" alt="" height="30px">
+            </div>
+                 <p>Secured Payment Gateways</p>
+                <img src="https://media.invisioncic.com/p289038/monthly_2022_10/Payment-methods.png.2b9ba23475aaa15189f555f77ec3a549.png" alt="" height="50px">
+         </div>
+         <div class="copyright">
+             <p>2025.Araku.in </p>
+          </div>
+    </footer>
+
+  <!--------------------- JS-FILES ---------------->  
+  <script src="All Script Files.JS"></script>
+
+   </body>
+</html>
+
+
+
+
+   
