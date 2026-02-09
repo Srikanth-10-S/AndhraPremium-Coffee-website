@@ -296,9 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdown("sizeSelected", "sizeOptions");
   dropdown("grindSelected", "grindOptions");
 
-  /* ---------- CART STORAGE ---------- */
-  localStorage.removeItem("cart");
-  let cart = [];
+/* ---------- CART STORAGE ---------- */
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
   /* ---------- UPDATE CART BADGE ---------- */
   function updateCartCount() {
@@ -568,11 +568,7 @@ function updateQty(i, val) {
 }
 
 
-
-
-
-
-
+  /* ================= LOGIN PAGE ================= */
 
 const modal = document.getElementById('loginModal');
   const profileIcon = document.querySelector('.icon');
@@ -591,3 +587,28 @@ const modal = document.getElementById('loginModal');
       modal.style.display = 'none';
     }
   });
+
+
+
+  /* ================= OPEN CHECKOUT PAGE ================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const cartIcon = document.querySelector(".cart");
+
+  if (!cartIcon) return;
+
+  cartIcon.addEventListener("click", () => {
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+      alert("Your cart is empty");
+      return;
+    }
+
+    window.location.href = "checkout.html";
+
+  });
+
+});
