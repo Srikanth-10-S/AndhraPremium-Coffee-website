@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#fff;
+}
+
+/* NAVBAR */
+.checkout-nav{
+  height:100px;
+  border-bottom:1px solid #ddd;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 85px;
+}
+
+.brand a{
+  text-decoration: none;
+  color: #000;
+  font-family: ui-rounded;
+  font-weight:600;
+}
+
+.cart-icon{
+  font-size:24px;
+}
+
+/* LAYOUT */
+.checkout-container{
+  display:grid;
+  grid-template-columns:50% 50%;
+  min-height:calc(100vh - 70px); /* full height minus navbar */
+  align-items:start;
+}
+
+/* NEW WRAPPER CENTERING */
+body{
+  display:flex;
+  flex-direction:column;
+}
+
+.checkout-container{
+  margin:auto 0; /* THIS centers left + right together */
+}
+
+
+/* LEFT SIDE */
+.checkout-left{
+  padding:45px 80px;
+}
+
+.checkout-left h3{
+  margin-top:30px;
+}
+
+input{
+  width:100%;
+  padding:17px;
+  margin-top:14px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+}
+
+
+.pay-icons img{
+  height:35px;
+  width:42px;
+  object-fit:contain;
+  padding:8px;
+  border-radius:50%;
+  cursor:pointer;
+  transition:0.25s ease;
+}
+
+.pay-icons img:hover{
+  background:#eee;
+  transform:scale(1.1);
+}
+
+.pay-icons img:active{
+  transform:scale(0.95);
+}
+
+
+.pay-btn{
+  width:100%;
+  padding:18px;
+  margin-top:20px;
+  background:black;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:6px;
+  font-size:16px;
+  transition:0.2s ease;
+}
+
+.pay-btn:hover{
+  background:#333;
+}
+
+.pay-btn:active{
+  transform:translateY(3px);
+  box-shadow:0 2px 6px rgba(0,0,0,0.2) inset;
+}
+
+
+/* RIGHT SIDE */
+.checkout-right{
+  height: 90vh;
+  background:#FFF5E0;
+  padding:58px;
+}
+
+/* CART ITEMS */
+.cart-items{
+  display:flex;
+  flex-direction:column;
+  gap:35px;
+}
+
+.cart-item{
+  display:flex;
+  align-items:center;
+  gap:35px;
+}
+
+.cart-img{
+  position:relative;
+}
+
+.cart-img img{
+  width:120px;
+  border-radius: 10px;
+}
+
+.qty-badge{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  background:black;
+  color:white;
+  font-size:12px;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.item-info h4{
+   margin-top:-34px;
+   font-size:18px;
+   font-weight: 500;
+}
+
+.item-info p{
+  margin-top:-22px;
+  font-size:13px;
+  color:#555;
+}
+
+.item-right{
+  margin-left:auto;
+  text-align:right;
+}
+
+.remove-btn{
+  background:none;
+  border:none;
+  color:#999;
+  font-size:12px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.remove-btn:hover{
+  text-decoration:underline;
+  color:black;
+}
+
+.remove-btn:active{
+  transform:translateY(-3px);
+}
+
+
+/* COUPON */
+.coupon{
+  display:flex;
+  margin-top:20px;
+  gap:10px;
+}
+
+.coupon input{
+  flex:1;
+  height:44px;
+  padding:0 12px;
+}
+
+.coupon button{
+  height:44px;
+  padding:0 32px;
+  border:none;
+  background:black;
+  color:white;
+  cursor:pointer;
+  border-radius:6px;
+  transition:0.2s;
+  margin-top: 14px;
+}
+
+.coupon button:hover{
+  background:#333;
+}
+
+.coupon button:active{
+ transform: translateY(-3px);
+}
+
+
+/* SUMMARY */
+.summary{
+  margin-top:30px;
+}
+
+.summary div{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+.total{
+  font-weight:bold;
+  font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="checkout-nav">
+  <h2 class="brand"><a href="index.html">Andhra Coffee</a></h2>
+  <i class='bx bx-shopping-bag cart-icon'></i>
+</div>
+
+<div class="checkout-container">
+
+<!-- LEFT -->
+<div class="checkout-left">
+
+  <h3>Contact</h3>
+  <input placeholder="Email">
+
+  <h3>Delivery</h3>
+  <input placeholder="Country / Region">
+
+  <div class="row">
+    <input placeholder="First name">
+    <input placeholder="Last name">
+  </div>
+
+  <input placeholder="Address">
+
+  <div class="row">
+    <input placeholder="City">
+    <input placeholder="State">
+    <input placeholder="Pincode">
+  </div>
+
+  <input placeholder="Phone">
+
+  <h3>Make Payment with </h3>
+
+  <div class="pay-icons">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo4x8kSTmPUq4PFzl4HNT0gObFuEhivHOFYg&s">
+    <img src="https://play-lh.googleusercontent.com/WDGsMRuVENnZPEpV4DEaXw12qtMY3em85xpmZqcXzeh0iT_eXFtAU9VUj-Z7xNQQd5DMqrkKSs9D0qbI1rlt">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+  </div>
+
+  <button class="pay-btn">PAY NOW</button>
+
+</div>
+
+<!-- RIGHT -->
+<div class="checkout-right">
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="coupon">
+    <input placeholder="Coupon code">
+    <button>Apply</button>
+  </div>
+
+  <div class="summary">
+    <div><span>Subtotal</span><span id="subTotal">₹ 0</span></div>
+    <div><span>Shipping</span><span>Free</span></div>
+    <div class="total"><span>Total</span><span id="totalPrice">₹ 0</span></div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function priceToNumber(price){
+  return Number(price.replace(/[₹, ]/g,""));
+}
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartItemsEl = document.getElementById("cartItems");
+const subTotalEl = document.getElementById("subTotal");
+const totalEl = document.getElementById("totalPrice");
+
+function renderCart(){
+  cartItemsEl.innerHTML = "";
+  let total = 0;
+
+  if(cart.length === 0){
+    cartItemsEl.innerHTML = "<p>Your cart is empty</p>";
+    subTotalEl.textContent = "₹ 0";
+    totalEl.textContent = "₹ 0";
+    return;
+  }
+
+  cart.forEach((item,index)=>{
+    const itemTotal = priceToNumber(item.price) * item.quantity;
+    total += itemTotal;
+
+    const div = document.createElement("div");
+    div.className = "cart-item";
+
+    div.innerHTML = `
+      <div class="cart-img">
+        <img src="${item.img}">
+        <div class="qty-badge">${item.quantity}</div>
+      </div>
+
+      <div class="item-info">
+        <h4>${item.title}</h4>
+        <p>${item.pack || ""} ${item.size || ""} ${item.grind || ""}</p>
+      </div>
+
+      <div class="item-right">
+        <div>₹ ${itemTotal}</div>
+        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+      </div>
+    `;
+
+    cartItemsEl.appendChild(div);
+  });
+
+  subTotalEl.textContent = "₹ " + total;
+  totalEl.textContent = "₹ " + total;
+}
+
+function removeItem(index){
+  cart.splice(index,1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+renderCart();
+</script>
+
+</body>
+</html>
